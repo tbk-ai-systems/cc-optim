@@ -1,0 +1,8 @@
+cc-optim-conversation.txt
+docs/
+src/
+*.info
+*.ts
+!dist/
+node_modules/
+.git/

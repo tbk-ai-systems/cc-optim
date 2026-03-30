@@ -1,0 +1,45 @@
+# Installation Guide
+
+## For End Users (using the tool)
+
+### Quick start (no install needed)
+  npx cc-optim
+
+### Global install
+  npm install -g cc-optim
+  cc-optim
+
+### Prerequisites
+  - Node.js >= 18
+  - npm >= 9
+
+### What cc-optim installs in your project
+  - repomix (devDependency) — Codebase packaging for LLMs
+  - grov (devDependency) — Persistent session memory for Claude Code
+
+  These are saved to your package.json so anyone cloning the repo
+  gets them automatically via `npm install`.
+
+---
+
+## For Developers (contributing to cc-optim)
+
+### Setup
+  git clone https://github.com/tbk-ai-systems/cc-optim.git
+  cd cc-optim
+  npm install
+
+### Build
+  npm run build          # Bundles src/ → dist/index.js via tsup
+
+### Test locally
+  npm link               # Makes `cc-optim` available globally
+  cd /tmp/test-project   # Go to any project
+  npm init -y            # Create a minimal project
+  cc-optim               # Run the TUI
+
+### Development mode
+  npm run dev            # Rebuilds on file changes (tsup --watch)
+
+### Type checking
+  npm run typecheck      # Runs tsc --noEmit
