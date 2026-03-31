@@ -29,12 +29,14 @@ export function generateClaudeMd(config: ClaudeMdConfig): string {
 
 **Stack**: ${langLine}
 
-See \`docs/ARCHITECTURE.md\` for architecture, conventions, and structure.
+## Context
+- \`docs/ARCHITECTURE.md\` — architecture, conventions, and structure
+${config.hasMultiPlanning ? `- \`docs/spec-registry.md\` — feature roadmap
+- \`docs/plan-registry.md\` — active tasks` : ''}
 
-## Init
+## Exploring
 - Use Repomix MCP for codebase context instead of reading files individually
-- Do NOT explore the codebase blindly — use Repomix MCP and \`docs/ARCHITECTURE.md\` first
-${config.hasMultiPlanning ? `- Check \`docs/spec-registry.md\` for the feature roadmap and \`docs/plan-registry.md\` for active tasks` : ''}
+- Do NOT explore the codebase blindly — use Repomix MCP and the context above first
 
 ## During Work
 - Follow the conventions in \`docs/ARCHITECTURE.md\`
